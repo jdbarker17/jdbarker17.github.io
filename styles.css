@@ -1,0 +1,325 @@
+:root {
+    --background: #004e64;
+    --primary-color: white;
+    --secondary-color: #2C2C2C;
+}
+
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    /* Debugger */
+    /*border: 1px solid red;*/
+    
+  
+}
+
+.email-header{
+    color: var(--primary-color);
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.spacer{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-right: auto;
+    margin-left: auto;
+    height: 100px;
+    width: 20px;
+}
+.second-section{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    margin-right: auto;
+    
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    color: var(--primary-color);
+    font-size: 120px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-family: 'Apple Chancery', cursive;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.6);
+    
+}
+
+.subtitle{
+    color: var(--primary-color);
+    font-size: 20px;
+    margin-bottom: 30px;
+    margin-top: relative;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    
+}
+
+.background {
+    background-color: var(--background);
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+    height: 100vh;
+
+}
+
+.social-media-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    list-style: none;
+}
+
+.social-media-buttons li {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: grid;
+    background-color: var(--primary-color);
+    place-items: center;
+    transition: all 0.3s;
+    border: 1px solid var(--primary-color);
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6); 
+}
+
+.social-media-buttons li a {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    color: var(--secondary-color);
+}
+
+.social-media-buttons li:hover {
+    background-color: var(--secondary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+}
+
+.social-media-buttons li a svg {
+    height: 24px;
+    width: 24px;
+    stroke: var(--secondary-color);
+    stroke-width: 1.75;
+    transition: 0.8s;
+}
+
+.social-media-buttons li:hover svg {
+    stroke: var(--primary-color);
+    transform: rotateY(360deg);
+    stroke-width: 1.75;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    max-width: 2000px;
+}
+
+.card {
+    position: relative;
+    left: 0px;
+    width: 100px;
+    height: 360px;
+    overflow: hidden;
+    background-color: var(
+        --background
+    );
+    transition: 0.4s
+        ease-in-out;
+    flex: 0.25;
+}
+
+.card img {
+    height: 360px;
+}
+
+.card:hover {
+    flex: 2;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/*
+:root {
+    --background: #2C2C2C;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}*/
+
+body {
+    background-color: var(--background);
+    height: 100vh;
+    margin: 0px;
+    font-size: 16px;
+    font-family: 'Red Hat Display', sans-serif;
+    
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    
+    margin: auto;
+    float: left;
+} 
+  
+.profile-wrapper {
+    width: 350px;
+    height: 450px;
+    position: relative;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    width: 350px;
+    height: 450px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    transition: 0.5s;
+}
+ 
+.profile .profile-image {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: var(--background);
+    transition: .5s;
+}
+
+.profile-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.profile:hover img {
+    opacity: 0.4;
+    transition: .5s;
+}
+
+.profile:hover .profile-image {
+    transform: translateY(-104px);
+    transition: all .9s;
+}
+
+.profile:hover .profile-bio {
+    opacity: 0.9; 
+}
+
+.social-icons {
+    position: absolute;
+    display: flex;
+    gap: 12px;
+    z-index: 3;
+    bottom: 164px;
+}
+  
+.social-icons li {
+    list-style: none;
+}
+
+.social-icons li a {
+    position: relative;
+    display: block;
+    display: grid;
+    place-items: center;
+    background: #fff;
+    font-size: 23px;
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #CDCDCD;
+    border-radius: 8px;
+    transition: .2s;
+    transform: translateY(32px);
+    opacity: 0;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6);
+}
+
+.social-icons li a:hover {
+    background: var(--background);
+    transition: .2s;
+}
+
+.social-icons li a svg {
+    height: 24px;
+    width: 24px;
+    color: var(--background);
+    transition: .2s;
+}
+
+.social-icons li a:hover svg {
+    color: white;
+    transition: 0.8s;
+    transform: rotateY(360deg);
+}
+
+.profile:hover .social-icons li a {
+    opacity: 1; 
+}
+
+.profile:hover li:nth-child(1) a {
+    transition-delay: 0.1s;
+}
+
+.profile:hover li:nth-child(2) a {
+    transition-delay: 0.2s;
+}
+
+.profile:hover li:nth-child(3) a {
+    transition-delay: 0.3s;
+}
+
+.profile:hover li:nth-child(4) a {
+    transition-delay: 0.4s;
+}
+
+.profile-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 4;
+    width: 100%;
+    height: 108px;
+    padding: 28px 14px;
+    z-index: 1;
+    color: #333;
+    background-color: #fff;
+    text-align: left;
+}
+
+.profile:hover .profile-name {
+    background-color: #fff;
+}
+
+.profile-name h2 {
+    margin-bottom: 8px;
+}
